@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+    buildToolsVersion globalConfiguration["androidBuildToolsVersion"]
+
+    defaultConfig {
+        applicationId "com.bluelampcreative.cleanarchitecturemvvm"
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode globalConfiguration["versionCode"]
+        versionName globalConfiguration["versionName"]
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    def globalDependencies = rootProject.ext.globalDependencies
+    def uiDependencies = rootProject.ext.uiDependencies
+
+    implementation globalDependencies.ktxCore
+    implementation globalDependencies.timber
+    implementation globalDependencies.coroutines
+    implementation globalDependencies.androidCoroutines
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation uiDependencies.appCompat
+    implementation uiDependencies.constraintLayout
+    implementation uiDependencies.material
+    implementation uiDependencies.supportFragment
+    implementation uiDependencies.coordinatorLayout
+    implementation uiDependencies.navigationFragment
+    implementation uiDependencies.navigationUI
+    implementation uiDependencies.lifeCycleExtensions
+    implementation uiDependencies.lifeCycleCommonJava8
+    implementation uiDependencies.koinAndroid
+    implementation uiDependencies.koinAndroidxViewModel
+    implementation uiDependencies.koinAndroidxScope
+
+
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+}
