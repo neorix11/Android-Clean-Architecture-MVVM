@@ -7,6 +7,13 @@ configurations.all {
 }
 
 dependencies {
+
+    def globalDependencies = rootProject.ext.globalDependencies
+
+    implementation globalDependencies.ktxCore
+    implementation globalDependencies.timber
+    implementation globalDependencies.coroutines
+    implementation globalDependencies.androidCoroutines
 }
 
 sourceCompatibility = "8"
