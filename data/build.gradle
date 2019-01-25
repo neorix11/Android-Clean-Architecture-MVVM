@@ -45,8 +45,5 @@ dependencies {
     implementation globalDependencies.coroutines
     implementation globalDependencies.androidCoroutines
 
-    implementation dataDependencies.roomRuntime
-    implementation dataDependencies.roomAnnotaionProcessor
-
     androidTestImplementation globalDependencies.runner
 }

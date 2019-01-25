@@ -2,16 +2,20 @@ package com.bluelampcreative.cleanarchitecturemvvm.views
 
 import androidx.lifecycle.MutableLiveData
 import com.bluelampcreative.cleanarchitecturemvvm.core.BaseViewModel
+import com.bluelampcreative.domain.models.None
+import com.bluelampcreative.domain.models.TestDataModel
+import com.bluelampcreative.domain.usecases.GetTestData
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
-class MainActivityViewModel(override val coroutineContext: CoroutineContext) : BaseViewModel() {
+class MainActivityViewModel(private val getTestData: GetTestData, override val coroutineContext: CoroutineContext) :
+    BaseViewModel() {
 
-    val resultData = MutableLiveData<String>()
+    val resultData = MutableLiveData<TestDataModel>()
 
     fun getTestData() {
         launch {
-            //call suspend function here
+            resultData.value = getTestData(None)
         }
     }
 }

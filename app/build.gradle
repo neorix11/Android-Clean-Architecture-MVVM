@@ -37,6 +37,9 @@ dependencies {
     implementation globalDependencies.coroutines
     implementation globalDependencies.androidCoroutines
 
+    implementation project(':domain')
+    implementation project(':data')
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     implementation uiDependencies.appCompat
