@@ -13,6 +13,7 @@ ext {
     roomVersion = "2.1.0-alpha03"
     timberVersion = "4.7.1"
     koinVersion = "1.0.2"
+    materialDialogVersion = "2.0.0-rc7"
 
     androidBasicXVersion = "1.0.0"
     constraintLayoutVersion = "1.1.2"
@@ -51,7 +52,8 @@ ext {
             lifeCycleCommonJava8:   "android.arch.lifecycle:common-java8:${lifecycleVersion}",
             koinAndroid:            "org.koin:koin-android:${koinVersion}",
             koinAndroidxViewModel:  "org.koin:koin-androidx-viewmodel:${koinVersion}",
-            koinAndroidxScope:      "org.koin:koin-androidx-scope:${koinVersion}"
+            koinAndroidxScope:      "org.koin:koin-androidx-scope:${koinVersion}",
+            materialDialog:         "com.afollestad.material-dialogs:core:${materialDialogVersion}"
     ]
 
     uiTestDependencies = [
