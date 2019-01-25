@@ -4,7 +4,7 @@ import kotlinx.coroutines.Job
 import org.koin.dsl.module.module
 
 val useCaseModule = module {
-    factory { GetTestData() }
+    factory { GetTestData(get()) }
 }
 
 val coroutineModule = module {
