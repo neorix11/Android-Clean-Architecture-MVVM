@@ -1,7 +1,8 @@
-package com.bluelampcreative.cleanarchitecturemvvm
+package com.bluelampcreative.cleanarchitecturemvvm.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.bluelampcreative.cleanarchitecturemvvm.R
 
 class MainActivity : AppCompatActivity() {
 
