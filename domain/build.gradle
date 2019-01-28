@@ -13,8 +13,8 @@ dependencies {
     implementation globalDependencies.ktxCore
     implementation globalDependencies.timber
     implementation globalDependencies.coroutines
-    implementation globalDependencies.androidCoroutines
+
+    testImplementation globalDependencies.junit
+    testImplementation globalDependencies.mockitoKotlin
 }
 
-sourceCompatibility = "8"
-targetCompatibility = "8"
