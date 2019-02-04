@@ -12,7 +12,7 @@ ext {
     navigationVersion = "1.0.0-alpha08"
     roomVersion = "2.1.0-alpha03"
     timberVersion = "4.7.1"
-    koinVersion = "1.0.2"
+    koinVersion = "2.0.0-beta-1"
     materialDialogVersion = "2.0.0-rc7"
 
     androidBasicXVersion = "1.0.0"

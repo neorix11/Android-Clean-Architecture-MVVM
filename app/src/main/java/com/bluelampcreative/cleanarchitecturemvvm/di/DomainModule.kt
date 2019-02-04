@@ -1,7 +1,7 @@
 import com.bluelampcreative.domain.usecases.GetTestData
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
-import org.koin.dsl.module.module
+import org.koin.dsl.module
 
 val useCaseModule = module {
     factory { GetTestData(get()) }

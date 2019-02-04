@@ -1,4 +1,4 @@
-import org.koin.dsl.module.module
+import org.koin.dsl.module
 
 val awsSdkModule = module {
     //for those using aws services

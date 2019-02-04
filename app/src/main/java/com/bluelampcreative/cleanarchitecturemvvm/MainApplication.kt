@@ -5,8 +5,7 @@ import appModule
 import domainModule
 import localStorageModule
 import networkModule
-import org.koin.android.ext.android.startKoin
-import org.koin.core.Koin.Companion.logger
+import org.koin.core.context.startKoin
 import repositoryModule
 import timber.log.Timber
 
@@ -19,14 +18,15 @@ class MainApplication : Application() {
             Timber.plant(Timber.DebugTree())
         }
 
-        startKoin(
-            this,
-            appModule +
-                    domainModule +
-                    localStorageModule +
-                    networkModule +
-                    repositoryModule
-            , logger = logger
-        )
+        startKoin {
+            logger()
+            modules(
+                appModule +
+                        domainModule +
+                        localStorageModule +
+                        networkModule +
+                        repositoryModule
+            )
+        }
     }
 }
