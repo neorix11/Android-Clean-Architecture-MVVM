@@ -1,5 +1,5 @@
 # Android-Clean-Architecture-MVVM
-A boilderplate Android project that uses Clean Architecture with MVVM with Kotlin
+A boilerplate Android project that uses Clean Architecture with MVVM with Kotlin
 
 
 ## MVVM
