@@ -21,4 +21,9 @@ class MainActivity : AppCompatActivity() {
             Timber.e("We have received some test data: ${it.message}")
         })
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mainActivityViewModel.doOnCleared()
+    }
 }

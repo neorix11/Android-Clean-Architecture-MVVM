@@ -8,8 +8,7 @@ import com.bluelampcreative.domain.usecases.GetTestData
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
-class MainActivityViewModel(private val getTestData: GetTestData, override val coroutineContext: CoroutineContext) :
-    BaseViewModel() {
+class MainActivityViewModel(private val getTestData: GetTestData) : BaseViewModel() {
 
     val resultData = MutableLiveData<TestDataModel>()
 
